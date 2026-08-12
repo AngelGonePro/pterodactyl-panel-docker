@@ -6,10 +6,10 @@ nano ~/pterodactyl-panel/.env
 
 ```
 mkdir pterodactyl-panel && \
-curl -L -o /tmp/vpn.zip https://raw.githubusercontent.com/AngelGonePro/pterodactyl-panel-docker/refs/heads/main/pterodactyl-panel.zip && \
+curl -L -o /tmp/pterodactyl-panel.zip https://raw.githubusercontent.com/AngelGonePro/pterodactyl-panel-docker/refs/heads/main/pterodactyl-panel.zip && \
 python3 - << 'EOF'
 import zipfile, os
-zip_path = "/tmp/vpn.zip"
+zip_path = "/tmp/pterodactyl-panel.zip"
 extract_to = "pterodactyl-panel"
 
 with zipfile.ZipFile(zip_path) as z:
@@ -22,9 +22,14 @@ with zipfile.ZipFile(zip_path) as z:
                 with open(target, "wb") as f:
                     f.write(z.read(member))
 EOF
-rm /tmp/vpn.zip
+rm /tmp/pterodactyl-panel.zip
 ```
 
+```
+# Copy and edit .env
+cp ~/pterodactyl-wings/.env.example ~/pterodactyl-wings/.env
+nano ~/pterodactyl-wings/.env
+```
 ```
 # Copy and edit .env
 cp ~/pterodactyl-wings/.env.example ~/pterodactyl-wings/.env
@@ -33,10 +38,10 @@ nano ~/pterodactyl-wings/.env
 
 ```
 mkdir pterodactyl-wings && \
-curl -L -o /tmp/vpn.zip https://raw.githubusercontent.com/AngelGonePro/pterodactyl-panel-docker/refs/heads/main/pterodactyl-wings.zip && \
+curl -L -o /tmp/pterodactyl-panel.zip https://raw.githubusercontent.com/AngelGonePro/pterodactyl-panel-docker/refs/heads/main/pterodactyl-wings.zip && \
 python3 - << 'EOF'
 import zipfile, os
-zip_path = "/tmp/vpn.zip"
+zip_path = "/tmp/pterodactyl-wings.zip"
 extract_to = "pterodactyl-wings"
 
 with zipfile.ZipFile(zip_path) as z:
@@ -49,5 +54,5 @@ with zipfile.ZipFile(zip_path) as z:
                 with open(target, "wb") as f:
                     f.write(z.read(member))
 EOF
-rm /tmp/vpn.zip
+rm /tmp/pterodactyl-wings.zip
 ```
