@@ -31,12 +31,6 @@ cp ~/pterodactyl-wings/.env.example ~/pterodactyl-wings/.env
 nano ~/pterodactyl-wings/.env
 ```
 ```
-# Copy and edit .env
-cp ~/pterodactyl-wings/.env.example ~/pterodactyl-wings/.env
-nano ~/pterodactyl-wings/.env
-```
-
-```
 mkdir pterodactyl-wings && \
 curl -L -o /tmp/pterodactyl-panel.zip https://raw.githubusercontent.com/AngelGonePro/pterodactyl-panel-docker/refs/heads/main/pterodactyl-wings.zip && \
 python3 - << 'EOF'
