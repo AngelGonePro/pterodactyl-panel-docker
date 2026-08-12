@@ -5,7 +5,7 @@ nano ~/pterodactyl-panel/.env
 ```
 
 ```
-mkdir linode-nginx-stack && \
+mkdir pterodactyl-panel && \
 curl -L -o /tmp/vpn.zip https://raw.githubusercontent.com/AngelGonePro/pterodactyl-panel-docker/refs/heads/main/pterodactyl-panel.zip && \
 python3 - << 'EOF'
 import zipfile, os
@@ -32,7 +32,7 @@ nano ~/pterodactyl-wings/.env
 ```
 
 ```
-mkdir linode-nginx-stack && \
+mkdir pterodactyl-wings && \
 curl -L -o /tmp/vpn.zip https://raw.githubusercontent.com/AngelGonePro/pterodactyl-panel-docker/refs/heads/main/pterodactyl-wings.zip && \
 python3 - << 'EOF'
 import zipfile, os
