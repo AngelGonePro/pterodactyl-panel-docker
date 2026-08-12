@@ -55,17 +55,16 @@ the panel's Configuration tab, set `PANEL_URL`, and for production point the
 `PTERODACTYL_*_DIR` vars at persistent absolute paths instead of the `./data`
 defaults.
 
-There is no `config.yml` to edit. `entrypoint.sh` generates it fresh from
-your `.env` values every time the container starts (Wings itself does not
-support `${VAR}` expansion in its config file, so this is done before Wings
-ever reads it). You never touch that file.
+There is no `config.yml` to edit. On every `docker compose up -d`, a small
+one-shot `wings-config` container (alpine, since the Wings image itself has
+no shell) writes `/etc/pterodactyl/config.yml` from those `.env` values
+before the `wings` container is allowed to start. You never touch that file.
 
 ```
 docker compose up -d
 ```
 
-That's the whole deployment — no manual folder creation needed, compose
-handles it.
+That's the whole deployment.
 
 Back in the panel, the node should show a green heart once Wings checks in.
 Repeat step 4 on additional machines to add more nodes — each one gets its
