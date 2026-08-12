@@ -1,4 +1,9 @@
 ```
+# absolute paths instead of the ./data defaults
+mkdir -p data/etc-pterodactyl data/var-lib-pterodactyl data/var-log-pterodactyl data/tmp-pterodactyl
+```
+
+```
 # Copy and edit .env
 cp ~/pterodactyl-panel/env.example ~/pterodactyl-panel/.env
 nano ~/pterodactyl-panel/.env
