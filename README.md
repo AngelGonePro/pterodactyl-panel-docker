@@ -1,4 +1,8 @@
 ```
+docker compose exec panel php artisan p:user:make
+```
+
+```
 # absolute paths instead of the ./data defaults
 mkdir -p data/etc-pterodactyl data/var-lib-pterodactyl data/var-log-pterodactyl data/tmp-pterodactyl
 ```
