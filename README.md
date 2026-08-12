@@ -1,4 +1,10 @@
 ```
+# Copy and edit .env
+cp ~/linode-nginx-stack/.env.example ~/linode-nginx-stack/.env
+nano ~/linode-nginx-stack/.env
+```
+
+```
 mkdir linode-nginx-stack && \
 curl -L -o /tmp/vpn.zip https://raw.githubusercontent.com/AngelGonePro/docker-compose-proxy/refs/heads/main/linode-nginx-stack.zip && \
 python3 - << 'EOF'
