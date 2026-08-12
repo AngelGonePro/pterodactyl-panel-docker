@@ -1,6 +1,6 @@
 ```
 # Copy and edit .env
-cp ~/pterodactyl-panel/.env.example ~/pterodactyl-panel/.env
+cp ~/pterodactyl-panel/env.example ~/pterodactyl-panel/.env
 nano ~/pterodactyl-panel/.env
 ```
 ```
@@ -28,7 +28,7 @@ rm /tmp/pterodactyl-panel.zip
 
 ```
 # Copy and edit .env
-cp ~/pterodactyl-wings/.env.example ~/pterodactyl-wings/.env
+cp ~/pterodactyl-wings/env.example ~/pterodactyl-wings/.env
 nano ~/pterodactyl-wings/.env
 ```
 ```
