@@ -3,12 +3,13 @@
 cp ~/pterodactyl-panel/.env.example ~/pterodactyl-panel/.env
 nano ~/pterodactyl-panel/.env
 ```
-
 ```
-mkdir pterodactyl-panel && \
-curl -L -o /tmp/pterodactyl-panel.zip https://raw.githubusercontent.com/AngelGonePro/pterodactyl-panel-docker/refs/heads/main/pterodactyl-panel.zip && \
+rm -rf ~/pterodactyl-panel && \
+mkdir ~/pterodactyl-panel && \
+wget -O /tmp/pterodactyl-panel.zip https://raw.githubusercontent.com/AngelGonePro/pterodactyl-panel-docker/refs/heads/main/pterodactyl-panel.zip && \
 python3 - << 'EOF'
 import zipfile, os
+
 zip_path = "/tmp/pterodactyl-panel.zip"
 extract_to = "pterodactyl-panel"
 
@@ -31,12 +32,14 @@ cp ~/pterodactyl-wings/.env.example ~/pterodactyl-wings/.env
 nano ~/pterodactyl-wings/.env
 ```
 ```
-mkdir pterodactyl-wings && \
-curl -L -o /tmp/pterodactyl-panel.zip https://raw.githubusercontent.com/AngelGonePro/pterodactyl-panel-docker/refs/heads/main/pterodactyl-wings.zip && \
+rm -rf ~/pterodactyl-wings && \
+mkdir ~/pterodactyl-wings && \
+wget -O /tmp/pterodactyl-panel.zip https://raw.githubusercontent.com/AngelGonePro/pterodactyl-panel-docker/refs/heads/main/pterodactyl-wings.zip && \
 python3 - << 'EOF'
 import zipfile, os
+
 zip_path = "/tmp/pterodactyl-wings.zip"
-extract_to = "pterodactyl-wings"
+extract_to = "pterodactyl-panel"
 
 with zipfile.ZipFile(zip_path) as z:
     for member in z.namelist():
