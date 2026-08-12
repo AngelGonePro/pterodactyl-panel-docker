@@ -39,7 +39,7 @@ python3 - << 'EOF'
 import zipfile, os
 
 zip_path = "/tmp/pterodactyl-wings.zip"
-extract_to = "pterodactyl-panel"
+extract_to = "pterodactyl-wings"
 
 with zipfile.ZipFile(zip_path) as z:
     for member in z.namelist():
