@@ -34,7 +34,7 @@ nano ~/pterodactyl-wings/.env
 ```
 rm -rf ~/pterodactyl-wings && \
 mkdir ~/pterodactyl-wings && \
-wget -O /tmp/pterodactyl-panel.zip https://raw.githubusercontent.com/AngelGonePro/pterodactyl-panel-docker/refs/heads/main/pterodactyl-wings.zip && \
+wget -O /tmp/pterodactyl-wings.zip https://raw.githubusercontent.com/AngelGonePro/pterodactyl-panel-docker/refs/heads/main/pterodactyl-wings.zip && \
 python3 - << 'EOF'
 import zipfile, os
 
