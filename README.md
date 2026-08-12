@@ -10,7 +10,7 @@ curl -L -o /tmp/vpn.zip https://raw.githubusercontent.com/AngelGonePro/pterodact
 python3 - << 'EOF'
 import zipfile, os
 zip_path = "/tmp/vpn.zip"
-extract_to = "linode-nginx-stack"
+extract_to = "pterodactyl-panel"
 
 with zipfile.ZipFile(zip_path) as z:
     for member in z.namelist():
