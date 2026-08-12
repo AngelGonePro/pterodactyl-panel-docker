@@ -1,7 +1,7 @@
 ```
 # Copy and edit .env
 cp ~/pterodactyl-panel/.env.example ~/pterodactyl-panel/.env
-nano ~/linode-nginx-stack/.env
+nano ~/pterodactyl-panel/.env
 ```
 
 ```
@@ -27,17 +27,17 @@ rm /tmp/vpn.zip
 
 ```
 # Copy and edit .env
-cp ~/pterodactyl-panel/.env.example ~/pterodactyl-panel/.env
-nano ~/linode-nginx-stack/.env
+cp ~/pterodactyl-wings/.env.example ~/pterodactyl-wings/.env
+nano ~/pterodactyl-wings/.env
 ```
 
 ```
 mkdir linode-nginx-stack && \
-curl -L -o /tmp/vpn.zip https://raw.githubusercontent.com/AngelGonePro/pterodactyl-panel-docker/refs/heads/main/pterodactyl-panel.zip && \
+curl -L -o /tmp/vpn.zip https://raw.githubusercontent.com/AngelGonePro/pterodactyl-panel-docker/refs/heads/main/pterodactyl-wings.zip && \
 python3 - << 'EOF'
 import zipfile, os
 zip_path = "/tmp/vpn.zip"
-extract_to = "linode-nginx-stack"
+extract_to = "pterodactyl-wings"
 
 with zipfile.ZipFile(zip_path) as z:
     for member in z.namelist():
