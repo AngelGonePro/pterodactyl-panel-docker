@@ -1,3 +1,8 @@
+UPDATE:
+```
+cd ~/pterodactyl-panel && docker compose pull && docker compose up -d && docker exec pterodactyl-panel-panel-1 nginx -v
+```
+
 ```
 docker compose exec panel php artisan p:user:make
 ```
